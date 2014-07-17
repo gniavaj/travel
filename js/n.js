@@ -1,4 +1,8 @@
 function me(ra, ho, nc) {
+
+    console.log('ra ' + ra);
+    console.log('ho ' + ho);
+    console.log('nc ' + nc);
     var q = ho + nc;
     var al = "";
     var pu = "";
@@ -27,7 +31,15 @@ function me(ra, ho, nc) {
 
 var fs = require('fs');
 var content = fs.readFileSync('./ua.js').toString();
-console.log(content);
+//console.log(content);
 
-/\dada/.g
-qr('XREgexxpd', 4, 1)
+//content.replace(/(me\s*\('[^,]+',\s*\d,\s*\d\))/g, );
+//jw('bndoieaNVmeX', 3, 1)//er qr jw
+
+content = content.replace(/(jw\s*\('([^,]+)',\s*(\d),\s*(\d)\))/g, function(m, $1, $2, $3, $4){
+
+    return "'" + me($2, parseInt($3), parseInt($4)) + "'";
+});
+//console.log(content);
+
+fs.writeFileSync('./ua.js', content);
