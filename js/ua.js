@@ -360,9 +360,7 @@
         var xet;
 
         /**run*/
-            //hx = 'U';
         hx = "U";
-        console.log('hx ' + hx);
 
         var o0i;
         var o6a3 = "";
@@ -373,7 +371,8 @@
         var l3q;
 
         /**run*/
-        s74k = window['String']["fromCharCode"](uqs + (0x41f % 0360 & 61));
+        //s74k  =
+        s74k = window['String']["fromCharCode"](uqs + 29);
         var ifi0;
         var gcj6 = !0;
         var pg = (0x3e8 % 0522 & 59);
@@ -581,7 +580,6 @@
 
         };
 
-        debugger
         // ginz 数组 存储 A-Z
         pbk1(ginz);
 
@@ -591,19 +589,19 @@
                 i = 0,
                 non = qkcd["length"];
             while (i < non) {
-                if (! (0x3e8 * 0200 & 97)) {
-                    var jk = ((0x3f3 | 01636) % 93);
+                if (! 0) {
+                    var jk = 0;
 
                 } else {
-                    jk = (0x3f3 * 0261 & 77);
+                    jk = 1;
 
                 }
                 if (!jk) {
-                    var qd = (0x3fe * 0277 & 79);
+                    var qd = 2;
 
                 }
                 if (qd) {
-                    gv ^= (gv << (0x3f3 * 01267 & 71)) + (gv >> 2) + qkcd["charCodeAt"](i++);
+                    gv ^= (gv << 5) + (gv >> 2) + qkcd["charCodeAt"](i++);
 
                 } else {
                     xo0p.nm = "pl";
@@ -769,9 +767,12 @@
         wwr8 = function(i1e, t0) {
             var h7 = 4,
                 o2f4 = o6a3;
-            var scn = (i1e)["toString"]((0x3e8 % 01654 & 81));
+            var scn = (i1e)["toString"](16);
             for (var i = scn["length"]; i > 0; i = i - h7) {
-                o2f4 = o2f4 + o6a3 + window["String"]["fromCharCode"]("0x" + scn["substring"](i - h7, i));
+                o2f4 = o2f4 + o6a3 +
+                    window["String"]["fromCharCode"](
+                        "0x" + scn["substring"](i - h7, i)
+                    );
 
             }
             return o2f4;
@@ -839,27 +840,23 @@
 
         };
         l3q = function(kmz, geom) {
-            for (var i = (0x3e8 % 0360 & 69), non = o0i["length"]; i < non; i++) {
+            for (var i = 0, non = o0i["length"]; i < non; i++) {
                 if (kmz == o0i[i]) {
                     return true;
-
                 }
 
             }
-            if (! (0x3e8 * 0200 & 89)) {
-                var aj = (0x3e8 * 0144 & 85);
+            if (!0) {
+                var aj = 0;
 
             } else {
-                aj = (0x3f3 * 0727 & 65);
-
+                aj = 1;
             }
             if (!aj) {
-                var ss = (0x3fe * 0171 & 67);
-
+                var ss = 2;
             }
             if (ss) {
                 co(kmz, geom);
-
             } else {
                 x[bn] = '\\u00' + tg[a];
 
@@ -875,16 +872,17 @@
 
             }
             var gv = o2("" + arguments["callee"]["caller"]);
-            if (wk == o6a3 || typeof wk == "undefined" || kmz[0] != (gv + xet(kmz[(0x3f3 * 0621 & 89)]))) {
+            if (wk == o6a3 || typeof wk == "undefined" ||
+                kmz[0] != (gv + xet(kmz[1]))) {
                 co(gv, "r");
                 return;
 
             }
-            var uj = (0x3e8 % 0144);
+            var uj = 0;
             while (!uj) {
-                if (uj + (0x3f3 * 0207 & 89)) {
+                if (uj + 1) {
                     o0i["push"](gv);
-                    uj = uj + ((0x3f3 | 01276) % 73);
+                    uj = uj + 1;
                     continue;
 
                 }
@@ -894,17 +892,17 @@
 
         };
 
-        if (! (0x3e8 * 0216 & 71)) {
-            var g0 = (0x3e8 % 0171 & 93);
+        if (! 0) {
+            var g0 = 0;
 
         } else {
-            g0 = (0x3f3 * 0547 & 59);
+            g0 = 1;
 
         }
 
 
         if (!g0) {
-            var s7g = (0x3fe * 0277 & 59);
+            var s7g = 2;
 
         }
 
@@ -950,24 +948,20 @@
 
         };
         ifi0 = function(d) {
-            for (var uqd = (0x3e8 % 0367 & 65); uqd < (0x409 * 0423 & 83); uqd++) {
-                if (uqd == (0x3e8 % 0360 & 67)) {
+            for (var uqd = 0; uqd < 3; uqd++) {
+                if (uqd == 0) {
                     sn(mwq(o2("" + arguments["callee"])), "" + arguments["callee"]);
 
-                } else if (uqd == (0x3e8 % 01546 & 75)) {
+                } else if (uqd == 2) {
                     q8([j4w, d]);
-
                 }
-                if (uqd == (0x3f3 * 0513 & 71)) {
+                if (uqd == 1) {
                     var j4w = 20;
-
                 }
-                var nr = (0x409 * 0475 & 95);
-                if (nr == (0x3f3 * 0621 & 95)) {
+                var nr = 5;
+                if (nr == 3) {
                     ie = navigator.appVersion.indexOf("MSIE");
-
                 }
-
             }
 
         };
@@ -981,17 +975,15 @@
         mkg = 0;
         qj = 0;
         nl = 0;
-        var ctd = (0x3f3 * 0673 & 95);
+        var ctd = 1;
 
-        while (! (ctd - (0x3e8 % 01143 & 73))) {
-            if (ctd + (0x3e8 % 0144 & 87)) {
+        while (! (ctd - 1)) {
+            if (ctd + 0) {
                 st = 0;
-                ctd = ctd - (0x3e8 % 0441 & 89);
+                ctd = ctd - 1;
                 continue;
-
             }
             x3 = window;
-
         }
 
         fmb = new window['RegExp']('^(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2}):(\\d{2}):(\\d{2})Z$');
@@ -1431,6 +1423,8 @@
 
         };
         eb = function(jw7) {
+            console.info('eb');
+            console.trace('eb');
             if (j0["LogVal"]) {
                 var d2td = window['eval'](j0['LogVal']);
                 var x05p = zi(d2td) + 1;
@@ -1455,11 +1449,13 @@
                     d2td = iq + m64 + ejk8 + m64 + qfv;
 
                 }
-                var lg = ((0x3e8 | 0216) % 67);
-                var c24b = (0x3e8 % 0763 & 67);
+                var lg = 1;
+                var c24b = 2;
                 switch ((++c24b - lg--) * (lg++)) {
-                    case(0x3e8 % 0144 & 93) : d2td = og(d2td);
-                    case((0x3f3 | 01215) % 73) : window["eval"](j0['LogVal'] + s74k + tch + d2td + tch + ';');
+                    case(0) : d2td = og(d2td);
+                    case(1) :
+                        console.info('d2td ' + d2td);
+                        window["eval"](j0['LogVal'] + s74k + tch + d2td + tch + ';');
                         break;
                     default:
                         st3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
@@ -2281,25 +2277,26 @@
             } catch(err) {}
 
         };
+        //vj会对全局变量赋值
         vj = function() {
-            var gl = (0x3e8 * 0243 & 69);
-            for (var ok9 = ((0x3e8 | 01001) % 77); ok9 <= ((0x3f3 | 01564) % 63); gl = ++ok9 + ok9+++ok9) {
+            var gl = 0;
+            for (var ok9 = 0; ok9 <= 7; gl = ++ok9 + ok9+++ok9) {
                 if (ok9 == gl) {
                     suxi = true;
                     continue;
 
                 }
-                if (2 * ok9 == gl - ((0x409 | 01010) % 77)) {
+                if (2 * ok9 == gl - (5)) {
                     dl = !!0;
                     break;
 
                 }
                 if (2 * ok9 == gl - 2) {
-                    frb = (0x3e8 % 0360 & 83);
+                    frb = 0;
                     ok9++;
 
                 }
-                if ((0x409 * 0547 & 67) * ok9 == gl + 2) {
+                if (3 * ok9 == gl + 2) {
                     f5 = new window['Array']();
 
                 }
@@ -2395,8 +2392,9 @@
                 }
 
             }
-            if ((j0['SendMethod'] & (0x3e8 % 01314 & 73)) > 0) {
+            if ((j0['SendMethod'] & 8) > 0) {
                 if (j0['LogVal']) {
+                    console.info('tch ' + tch);
                     window['eval'](j0['LogVal'] + s74k + tch + tch + ';');
 
                 }
@@ -2587,22 +2585,21 @@
             var zsq = kfc;
             if (!suxi) {
                 return;
-
             }
-            for (var zs = (0x3e8 * 0200 & 69); zs < (0x3f3 * 01431 & 67); zs++) {
-                if (zs == ((0x3e8 | 0745) % 67)) {
+            for (var zs = 0; zs < 3; zs++) {
+                if (zs == 0) {
                     l3q(o2("" + arguments['callee']['caller']), "s");
 
-                } else if (zs == (0x3f3 * 0736 & 71)) {
+                } else if (zs == 2) {
                     var i = 0;
 
                 }
-                if (zs == ((0x3e8 | 0637) % 73)) {
+                if (zs == 1) {
                     var zhc = [];
 
                 }
-                var j71c = ((0x409 | 01010) % 55);
-                if (j71c == ((0x3f3 | 01701) % 63)) {
+                var j71c = 5;
+                if (j71c == 3) {
                     po += 2;
 
                 }
@@ -2614,7 +2611,8 @@
             }
             uzy3(kfc);
             f5['push'](zhc);
-            if ((j0['SendMethod'] & (0x3e8 % 0441 & 81)) > 0) {
+
+            if ((j0['SendMethod'] & 1) > 0) {
                 ndzu(zsq);
 
             }
@@ -2704,27 +2702,32 @@
             }
 
         };
-        nt4 = (0x435 % 0547);
+        nt4 = 0;
+        //domready后要执行的函数
         r3 = function(e) {
+
+            console.error('r3');
+
             if (nt4 != 0) {
                 return;
-
             }
-            nt4 = (0x3f3 * 0621 & 69);
+            nt4 = 1;
             v5xz = q8;
             vj();
-            sn(mwq(o2("" + arguments['callee'])), "" + arguments['callee']);
-            if ((j0['SendMethod'] & (0x3e8 % 01546 & 71)) > 0) {
-                var i5a = ((0x3e8 | 01701) % 91);
+            sn(mwq(
+                o2("" + arguments['callee'])
+                ),
+                "" + arguments['callee']
+            );
+            if ((j0['SendMethod'] & 2) > 0) {
+                var i5a = 0;
                 while (!i5a) {
-                    if (i5a + ((0x3e8 | 0637) % 73)) {
+                    if (i5a + 1) {
                         setInterval(k087, j0['SendTimer']);
-                        i5a = i5a + (0x3f3 * 0673 & 73);
+                        i5a = i5a + 1;
                         continue;
-
                     }
                     oi.nm = "uxa";
-
                 }
 
             }
@@ -2748,7 +2751,11 @@
                 }
 
             }
+
+            console.error('r3 wlu9("1")');
             wlu9("2");
+            debugger
+            console.error('r3 wlu9("2")');
             if ((j0['SendMethod'] & 1) > 0 || (j0['SendMethod'] & 8) > (0x3e8 % 0360 & 71)) {
                 var s7n = (0x3e8 % 0504 & 65);
                 while (!s7n) {
@@ -2896,8 +2903,12 @@
 
             }
             wlu9("10");
-
+            console.error('r3 end');
         };
+
+        //在window上添加setOnError 和 add方法
+        //代码中调用add 把函数添加到ready后的执行队列中
+        //domready后 执行序列中的函数
         cr5d = (function() {
             var q2um = [],
                 gk5 = false,
@@ -2913,23 +2924,23 @@
 
                 },
                 ready = function() {
-                    var aql = (0x3f3 * 0207 & 67);
-                    while (! (aql - (0x3e8 % 0153 & 67))) {
-                        if (aql + (0x3e8 % 0360 & 67)) {
+                    var aql = 1;
+                    while (! (aql - 1)) {
+                        if (aql + 0) {
                             gk5 = true;
-                            aql = aql - (0x3f3 * 0673 & 69);
+                            aql = aql - 1;
                             continue;
 
                         }
                         t5 += 2;
 
                     }
-                    for (var zsq = (0x3e8 % 0144 & 81); zsq < q2um['length']; zsq++) {
-                        var dlq = (0x3e8 % 0144 & 79);
+                    for (var zsq = 0; zsq < q2um['length']; zsq++) {
+                        var dlq = 0;
                         while (!dlq) {
-                            if (dlq + (0x3f3 * 0621 & 85)) {
+                            if (dlq + 1) {
                                 fz(q2um[zsq]['fn'], q2um[zsq]['args'] || []);
-                                dlq = dlq + (0x3f3 * 0423 & 67);
+                                dlq = dlq + 1;
                                 continue;
 
                             }
@@ -2961,6 +2972,8 @@
                 return this;
 
             };
+
+            //DOMContentLoaded 后执行 ready
             if (window['addEventListener']) {
                 window['document']['addEventListener']('DOMContentLoaded',
                     function() {
@@ -3032,86 +3045,93 @@
             kxhw['appendChild'](r6);
 
         };
+        //
         zyk = function() {
             if (typeof UA_Opt == 'undefined') {
-                return (0x3f3 * 0261 & 69);
-
+                return 1;
             }
             if (typeof UA_Opt['Flag'] != 'number') {
-                return (0x3f3 * 0423 & 85);
-
+                return 1;
             }
-            var eo7 = ((0x3fe | 0333) % 73);
-            while (! (eo7 - (0x44b % 0556))) {
-                if (eo7 + (0x3e8 % 0144 & 77)) {
+
+            /*初始化ns对象 start*/
+            var eo7 = 1;
+            while (! (eo7 - 1)) {
+                if (eo7 + 0) {
                     var ns = new window['Object'];
-                    eo7 = eo7 - (0x3e8 % 01107 & 65);
+                    eo7 = eo7 - 1;
                     continue;
 
                 }
+                //没执行
                 ioju.updateUA("jj", ky6);
 
             }
+            /*初始化ns对象 end*/
+
+            /*读取FormId start*/
             if (typeof UA_Opt['FormId'] != 'undefined' && UA_Opt['FormId'] != "") {
-                var dy = ((0x3f3 | 0277) % 73);
-                while (! (dy - (0x3e8 % 01125 & 77))) {
-                    if (dy + (0x414 % 0405)) {
+                var dy = 1;
+                while (! (dy - 1)) {
+                    if (dy + 0) {
                         ns['FormId'] = UA_Opt['FormId'];
-                        dy = dy - (0x3e8 % 01305 & 73);
+                        dy = dy - 1;
                         continue;
 
                     }
+                    //没执行
                     this.UAOpt = ot;
-
                 }
-
             }
+            /*读取FormId end*/
+
             if (typeof UA_Opt['LogVal'] != 'undefined' && UA_Opt['LogVal'] != "") {
                 ns['LogVal'] = UA_Opt['LogVal'];
-
             }
+
+            //Flag各个位 标示某功能的是否开启
             ns['EnableKSLog'] = (UA_Opt['Flag'] >> 1) & 1;
-            ns['EnableMCLog'] = (UA_Opt['Flag'] >> ((0x3e8 | 0207) % 67)) & 1;
-            ns['EnableMPLog'] = (UA_Opt['Flag'] >> 3) & (0x3e8 % 0441 & 89);
-            ns['LogTimeInterval'] = (UA_Opt['Flag'] >> (0x409 * 01026 & 63)) & 1;
-            ns['BrowserInfo'] = (UA_Opt['Flag'] >> 7) & ((0x3fe | 0531) % 73);
-            ns['GetMacAddr'] = (UA_Opt['Flag'] >> 8) & (0x3f3 * 0621 & 93);
-            ns['ProxyInfo'] = (UA_Opt['Flag'] >> ((0x414 | 0637) % 55)) & 1;
+            ns['EnableMCLog'] = (UA_Opt['Flag'] >> 2) & 1;
+            ns['EnableMPLog'] = (UA_Opt['Flag'] >> 3) & 1;
+            ns['LogTimeInterval'] = (UA_Opt['Flag'] >> 6) & 1;
+            ns['BrowserInfo'] = (UA_Opt['Flag'] >> 7) & 1;
+            ns['GetMacAddr'] = (UA_Opt['Flag'] >> 8) & 1;
+            ns['ProxyInfo'] = (UA_Opt['Flag'] >> (9)) & 1;
             ns['PCIDInfo'] = (UA_Opt['Flag'] >> 10) & 1;
-            ns['Location'] = (UA_Opt['Flag'] >> (0x41f * 0745 & 79)) & 1;
-            ns['Token'] = (UA_Opt['Flag'] >> 12) & ((0x3e8 | 0342) % 77);
+            ns['Location'] = (UA_Opt['Flag'] >> (11)) & 1;
+            ns['Token'] = (UA_Opt['Flag'] >> 12) & (1);
             ns['ScreenInfo'] = (UA_Opt['Flag'] >> 13) & 1;
-            ns['FocusInfo'] = (UA_Opt['Flag'] >> 14) & ((0x3e8 | 0612) % 91);
-            ns['FlashInfo'] = (UA_Opt['Flag'] >> (0x3e8 * 0252 & 85)) & 1;
+            ns['FocusInfo'] = (UA_Opt['Flag'] >> 14) & (1);
+            ns['FlashInfo'] = (UA_Opt['Flag'] >> (16)) & 1;
             ns['UMID'] = (UA_Opt['Flag'] >> 17) & 1;
+
             if (typeof UA_Opt['Token'] == 'string') {
                 ns['TokenStr'] = UA_Opt['Token'];
                 UA_Opt['setToken'] = function(h8p) {
                     ns['TokenStr'] = UA_Opt['Token'] = h8p;
                     if (nt4 == 1) {
                         sn(mwq(o2("" + arguments['callee'])), "" + arguments['callee']);
-                        q8([(0x3f3 * 01672 & 77), h8p]);
-
+                        q8([(12), h8p]);
                     }
-
                 };
 
             } else {
                 ns['Token'] = 0;
 
             }
-            var bv = (0x456 % 01053);
+            var bv = 0;
             while (!bv) {
-                if (bv + (0x3e8 % 01125 & 77)) {
+                if (bv + (1)) {
                     ns['ImgUrl'] = (typeof UA_Opt['ImgUrl'] == 'string') ? UA_Opt['ImgUrl'] : '';
-                    bv = bv + (0x3f3 * 0351 & 69);
+                    bv = bv + (1);
                     ns['GetAttrs'] = [];
                     continue;
 
                 }
+                //没执行
                 o0p.updateUA("kj", kn);
-
             }
+
             if (typeof UA_Opt['GetAttrs'] != 'undefined') {
                 for (var i = 0; i < UA_Opt['GetAttrs']['length']; i++) {
                     ns['GetAttrs']['push'](UA_Opt['GetAttrs'][i]);
@@ -3119,17 +3139,18 @@
                 }
 
             }
-            var o3dh = (0x3e8 % 0513 & 81);
-            while (! (o3dh - (0x3f3 * 0423 & 65))) {
-                if (o3dh + (0x3e8 % 0504 & 67)) {
+            var o3dh = 1;
+            while (! (o3dh - 1)) {
+                if (o3dh + 0) {
                     ns['ExTarget'] = [];
-                    o3dh = o3dh - (0x3f3 * 0673 & 65);
+                    o3dh = o3dh - 1;
                     continue;
 
                 }
+                //没执行
                 t[c] = '\\u00' + xlk[a];
-
             }
+
             if (typeof UA_Opt['ExTarget'] != 'undefined') {
                 for (var i = 0; i < UA_Opt['ExTarget']['length']; i++) {
                     ns['ExTarget']['push'](UA_Opt['ExTarget'][i]);
@@ -3137,17 +3158,37 @@
                 }
 
             }
-            ns['MPInterval'] = (typeof UA_Opt['MPInterval'] != 'undefined' && UA_Opt['MPInterval'] > (0x3e8 % 0414 & 57)) ? UA_Opt['MPInterval'] : 50;
-            ns['MaxMCLog'] = (typeof UA_Opt['MaxMCLog'] != 'undefined' && UA_Opt['MaxMCLog'] > (0x3e8 % 0171 & 93)) ? UA_Opt['MaxMCLog'] : (0x3e8 * 0171 & 67);
-            ns['MaxKSLog'] = (typeof UA_Opt['MaxKSLog'] != 'undefined' && UA_Opt['MaxKSLog'] > ((0x3e8 | 0736) % 73)) ? UA_Opt['MaxKSLog'] : (0x3e8 * 0216 & 67);
-            ns['MaxMPLog'] = (typeof UA_Opt['MaxMPLog'] != 'undefined' && UA_Opt['MaxMPLog'] > 0) ? UA_Opt['MaxMPLog'] : 0;
-            var qv = ((0x3fe | 0441) % 73);
-            var m2g = (0x3e8 % 0655 & 83);
+            ns['MPInterval'] =
+                (typeof UA_Opt['MPInterval'] != 'undefined' && UA_Opt['MPInterval'] > 0) ?
+                    UA_Opt['MPInterval'] : 50;
+
+            ns['MaxMCLog'] =
+                (typeof UA_Opt['MaxMCLog'] != 'undefined' && UA_Opt['MaxMCLog'] > 0) ?
+                    UA_Opt['MaxMCLog'] : 0;
+
+            ns['MaxKSLog'] =
+                (typeof UA_Opt['MaxKSLog'] != 'undefined' && UA_Opt['MaxKSLog'] > (0)) ?
+                    UA_Opt['MaxKSLog'] : (0);
+
+            ns['MaxMPLog'] =
+                (typeof UA_Opt['MaxMPLog'] != 'undefined' && UA_Opt['MaxMPLog'] > 0) ?
+                    UA_Opt['MaxMPLog'] : 0;
+
+            var qv = 1;
+            var m2g = 2;
             switch ((++m2g - qv--) * (qv++)) {
-                case(0x3e8 % 0315 & 75) : ns['MaxFocusLog'] = (typeof UA_Opt['MaxFocusLog'] != 'undefined' && UA_Opt['MaxFocusLog'] > 0) ? UA_Opt['MaxFocusLog'] : (0x3e8 % 0216 & 81);
-                case(0x3e8 % 01143 & 89) : ns['SendInterval'] = (typeof UA_Opt['SendInterval'] != 'undefined' && UA_Opt['SendInterval'] > ((0x3f3 | 01215) % 93)) ? UA_Opt['SendInterval'] : 1;
+                case(0) :
+                    ns['MaxFocusLog'] =
+                        (typeof UA_Opt['MaxFocusLog'] != 'undefined' && UA_Opt['MaxFocusLog'] > 0) ?
+                            UA_Opt['MaxFocusLog'] : 0;
+                case(1) :
+                    ns['SendInterval'] =
+                        (typeof UA_Opt['SendInterval'] != 'undefined' && UA_Opt['SendInterval'] > (0)) ?
+                            UA_Opt['SendInterval'] : 1;
                 default:
-                    ns['SendMethod'] = (typeof UA_Opt['SendMethod'] != 'undefined' && UA_Opt['SendMethod'] > 0) ? UA_Opt['SendMethod'] : 0;
+                    ns['SendMethod'] =
+                        (typeof UA_Opt['SendMethod'] != 'undefined' && UA_Opt['SendMethod'] > 0) ?
+                            UA_Opt['SendMethod'] : 0;
                     break;
 
             }
@@ -3176,40 +3217,41 @@
                     ie = navigator.appVersion.indexOf("MSIE");
 
                 }
-
             }
             ns['ResHost'] = (typeof UA_Opt['ResHost'] == 'string') ? UA_Opt['ResHost'] : 'acjs.aliyun.com';
             ns['SendTimer'] = (typeof UA_Opt['SendTimer'] == "number") ? UA_Opt['SendTimer'] : 1000;
             j0 = ns;
-            return (0x3e8 * 0252 & 69);
+            return 0;
 
         };
 
         y1m = function() {
             window['acjs'] = 1;
+
+            //初始化配置对象
             if (0 != zyk()) {
                 return;
-
             };
-            for (var pg6 = ((0x3e8 | 01134) % 85); pg6 < (0x3f3 % 0234 & 55); pg6++) {
-                if (pg6 == ((0x3e8 | 0277) % 93)) {
+
+            for (var pg6 = 0; pg6 < 3; pg6++) {
+                if (pg6 == 0) {
+                    //window body初始化事件
                     za(window);
 
-                } else if (pg6 == ((0x3fe | 0522) % 85)) {
+                } else if (pg6 == 2) {
                     UA_Opt['reload'] = xyp;
-
                 }
-                if (pg6 == (0x3e8 % 01107 & 85)) {
+                if (pg6 == 1) {
                     UA_Opt['attachEvents'] = za;
 
                 }
-                var ko = ((0x409 | 0376) % 91);
-                if (ko == (0x3f3 % 0556 & 67)) {
+                var ko = 5;
+                if (ko == 3) {
                     this.UAOpt = e3;
-
                 }
 
             }
+
             if (j0['UMID']) {
                 UA_Opt['setUM'] = y5r;
                 n4();
@@ -3218,7 +3260,7 @@
 
         };
 
-        za = function(q8) {
+        za = function(win) {
             var ti1 = new window['Object'];
             ti1["mousedown"] = jif;
             ti1["keydown"] = yoe;
@@ -3228,7 +3270,7 @@
             ti1['load'] = r3;
             ti1["beforeunload"] = p9;
             ti1["unload"] = p9;
-            var c4tz = q8['document'];
+            var c4tz = window['document'];
             var ba = function(e, t0) {
                 if (e == 'focus') {
                     if (t0['attachEvent']) {
@@ -3309,30 +3351,33 @@
             };
             var j96 = function(e) {
                 ba(e, c4tz);
-
             };
             var ebot = function(e) {
-                ba(e, q8);
+                ba(e, window);
 
             };
+
             cr5d['add'](r3);
+
             if (j0['EnableMCLog']) {
+                //body注册mousedown
                 j96("mousedown");
 
             }
             if (j0['EnableKSLog']) {
-                if (! (0x3e8 % 0367 & 81)) {
-                    var vfz = ((0x3f3 | 0277) % 93);
+                if (! 0) {
+                    var vfz = 0;
 
                 } else {
-                    vfz = (0x3e8 % 0423 & 65);
+                    vfz = 1;
 
                 }
                 if (!vfz) {
-                    var s8 = (0x3e8 % 0243 & 75);
+                    var s8 = 2;
 
                 }
                 if (s8) {
+                    //body注册keydown
                     j96("keydown");
 
                 } else {
@@ -3342,20 +3387,23 @@
 
             }
             if (j0['EnableMPLog']) {
+                //body注册mousemove
                 j96("mousemove");
 
             }
             if (j0['FocusInfo']) {
+                //body注册focus
                 j96("focus");
+                //body注册blur
                 j96('blur');
 
             }
-            if ((j0['SendMethod'] & (0x3e8 % 0763 & 59)) > (0x3e8 % 0144 & 93)) {
-                if (typeof q8['onbeforeunload'] != 'undefined') {
+            if ((j0['SendMethod'] & 2) > 0) {
+                if (typeof window['onbeforeunload'] != 'undefined') {
                     ebot("beforeunload");
 
                 }
-                if (typeof q8['onunload'] != "undefined") {
+                if (typeof window['onunload'] != "undefined") {
                     ebot("unload");
 
                 }
