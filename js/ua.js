@@ -180,7 +180,7 @@
         var le = (0x3e8 * 0216 & 73);
         for (var d3b = (0x3e8 % 0144 & 89); d3b <= ((0x3f3 | 01206) % 63); le = ++d3b + d3b+++d3b) {
             if (d3b == le) {
-                var swic;
+                var getEleById;
                 continue;
 
             }
@@ -364,7 +364,7 @@
 
         var o0i;
         var o6a3 = "";
-        var c2pk = !!((0x3e8 | 01026) % 73);
+        var c2pk = !!0;
         var mwq;
         var co;
         var sn;
@@ -451,7 +451,7 @@
             }
 
         };
-        swic = function(hx) {
+        getEleById = function(hx) {
             return window['document']["getElementById"](hx);
 
         };
@@ -583,11 +583,21 @@
         // ginz 数组 存储 A-Z
         pbk1(ginz);
 
+        /**
+         * 把每个字符串进行一定的位操作  返回一个位操作累加后的数字
+         * @param {String} qkcd 函数体代码
+         * @returns {number}
+         */
         o2 = function(qkcd) {
-            qkcd = qkcd["replace"](/[^g-km-svwyzG-KM-SVWYZ_$=]/g, o6a3);
+            //g h i j k (l) m n o p q r s (t u) v w (x) y z
+            //大写
+            //_$=
+            qkcd = qkcd["replace"](/[^g-km-svwyzG-KM-SVWYZ_$=]/g, o6a3);  //o6a3 ""
+
             var gv = 31,
                 i = 0,
                 non = qkcd["length"];
+
             while (i < non) {
                 if (! 0) {
                     var jk = 0;
@@ -670,24 +680,30 @@
             ifi0(['de', h25 + "_" + rx]);
 
         };
+
         wlu9 = function(hj3o) {
-            var xm = (0x3e8 % 01143 & 91);
-            var u4 = ((0x3e8 | 0234) % 85);
+            var xm = 1;
+            var u4 = 0;
+            //(++u4 - xm--) * xm求值结果是0
             switch ((++u4 - xm--) * xm) {
-                case((0x3e8 | 01341) % 91) : var q4bf = new window["Date"]()["getTime"]();
-                case(0x3e8 % 01305 & 89) : h6["push"](wwr8(q4bf));
+                case(0) :
+                    var q4bf = new window["Date"]()["getTime"]();
+                case(1) :
+                    h6["push"](wwr8(q4bf));
                     break;
-                case (0x3e8 % 0531 & 75) : this.UAOpt = pri;
+                case (2) :
+                    this.UAOpt = pri;
 
             }
+
             if (h6["length"] > 1) {
-                var kxom = q4bf - xet(h6[h6["length"] - ((0x3fe | 0754) % 85)]);
+                var kxom = q4bf - xet(h6[h6["length"] - 2]);
                 if (kxom > pza) {
-                    var ah = (0x3e8 % 01323 & 73);
-                    while (! (ah - (0x3f3 * 0261 & 97))) {
-                        if (ah + (0x3e8 % 0522 & 59)) {
+                    var ah = 1;
+                    while (! (ah - 1)) {
+                        if (ah + 0) {
                             ifi0(["to", [kxom, q4bf, hj3o]]);
-                            ah = ah - ((0x3e8 | 0306) % 67);
+                            ah = ah - 1;
                             ri();
                             continue;
 
@@ -764,9 +780,17 @@
             }
 
         };
+
+        /**
+         * 根据当前时间安某种算法返回一个字符串
+         * @param i1e 当前时间毫秒值
+         * @param t0
+         * @returns {string}
+         */
         wwr8 = function(i1e, t0) {
             var h7 = 4,
                 o2f4 = o6a3;
+
             var scn = (i1e)["toString"](16);
             for (var i = scn["length"]; i > 0; i = i - h7) {
                 o2f4 = o2f4 + o6a3 +
@@ -781,9 +805,14 @@
 
         //ginz A-Za-z
         ox8(ginz);
-
+        /**
+         *
+         * @param {Number} n3g 对函数体代码位移处理后的数字
+         * @returns {Array}
+         */
         mwq = function(n3g) {
             var q4bf = new window["Date"]()["getTime"]();
+            //wwr8  根据当前时间安某种算法返回一个字符串
             return [n3g + q4bf, wwr8(q4bf)];
 
         };
@@ -864,7 +893,13 @@
             return false;
 
         };
+        /**
+         * 存函数体数字到o0i
+         * @param {Array} kmz [函数体数字+当前毫秒值, 当前毫秒值某种算法计算出的字符串]
+         * @param {String} wk 函数提代码
+         */
         sn = function(kmz, wk) {
+            //首次执行  c2pk为false
             if (!c2pk) {
                 var kkg = o2("" + arguments["callee"]);
                 o0i["push"](kkg);
@@ -872,12 +907,14 @@
 
             }
             var gv = o2("" + arguments["callee"]["caller"]);
+
+            //所有调用sn的地方都传了wk参数
             if (wk == o6a3 || typeof wk == "undefined" ||
                 kmz[0] != (gv + xet(kmz[1]))) {
                 co(gv, "r");
                 return;
-
             }
+
             var uj = 0;
             while (!uj) {
                 if (uj + 1) {
@@ -950,7 +987,8 @@
         ifi0 = function(d) {
             for (var uqd = 0; uqd < 3; uqd++) {
                 if (uqd == 0) {
-                    sn(mwq(o2("" + arguments["callee"])), "" + arguments["callee"]);
+                    sn(
+                        mwq(o2("" + arguments["callee"])), "" + arguments["callee"]);
 
                 } else if (uqd == 2) {
                     q8([j4w, d]);
@@ -1431,11 +1469,11 @@
                 var ejk8 = cgy(jw7, x05p);
                 var qfv = cgy(wws, x05p + 1);
                 if (d2td == o6a3) {
-                    var k1 = (0x3f3 * 0207 & 73);
-                    while (! (k1 - (0x3e8 % 0441 & 75))) {
-                        if (k1 + (0x3e8 % 0522 & 59)) {
-                            d2td = a1i9["substring"]((0x4b9 * 01735 & 55), 56) + ejk8 + m64 + qfv;
-                            k1 = k1 - (0x3f3 * 0351 & 69);
+                    var k1 = 1;
+                    while (! (k1 - 1)) {
+                        if (k1 + 0) {
+                            d2td = a1i9["substring"](53, 56) + ejk8 + m64 + qfv;
+                            k1 = k1 - 1;
                             continue;
 
                         }
@@ -1451,8 +1489,10 @@
                 }
                 var lg = 1;
                 var c24b = 2;
+                //(++c24b - lg--) * (lg++)  ->0
                 switch ((++c24b - lg--) * (lg++)) {
-                    case(0) : d2td = og(d2td);
+                    case(0) :
+                        d2td = og(d2td);
                     case(1) :
                         console.info('d2td ' + d2td);
                         window["eval"](j0['LogVal'] + s74k + tch + d2td + tch + ';');
@@ -1552,7 +1592,7 @@
             var smc = (0x3e8 % 0540 & 67);
             while (!smc) {
                 if (smc + (0x3e8 % 01305 & 89)) {
-                    var qu = swic(hx);
+                    var qu = getEleById(hx);
                     smc = smc + (0x3f3 * 0351 & 65);
                     continue;
 
@@ -2278,6 +2318,8 @@
 
         };
         //vj会对全局变量赋值
+        //赋值uadata 空串
+        //初始化o0i = []
         vj = function() {
             var gl = 0;
             for (var ok9 = 0; ok9 <= 7; gl = ++ok9 + ok9+++ok9) {
@@ -2302,20 +2344,20 @@
                 }
 
             }
-            for (var wcsa = ((0x3f3 | 01375) % 93); wcsa < ((0x3f3 | 01636) % 85); wcsa++) {
-                if (wcsa == (0x3e8 % 0540 & 65)) {
+            for (var wcsa = 0; wcsa < 3; wcsa++) {
+                if (wcsa == 0) {
                     o0i = [];
 
-                } else if (wcsa == ((0x3e8 | 01413) % 91)) {
+                } else if (wcsa == 2) {
                     wws = [];
 
                 }
-                if (wcsa == (0x3e8 % 0441 & 91)) {
+                if (wcsa == 1) {
                     h6 = [];
 
                 }
-                var md = (0x3e8 % 01251 & 69);
-                if (md == ((0x3f3 | 0200) % 63)) {
+                var md = 5;
+                if (md == 3) {
                     ey += 44;
 
                 }
@@ -2325,15 +2367,15 @@
                 t24 = j0['SendInterval'];
 
             } else {
-                if (! ((0x3fe | 0234) % 73)) {
-                    var dr = (0x3e8 * 0200 & 75);
+                if (! 0) {
+                    var dr = 0;
 
                 } else {
-                    dr = (0x3e8 % 01125 & 65);
+                    dr = 1;
 
                 }
                 if (!dr) {
-                    var dg = (0x3f3 % 01161 & 91);
+                    var dg = (2);
 
                 }
                 if (dg) {
@@ -2347,26 +2389,26 @@
             }
             rp = j0['ImgUrl'];
             if ((j0['SendMethod'] & 1) > 0) {
-                if (! (0x3e8 * 0277 & 65)) {
-                    var zd = (0x3e8 % 0324 & 97);
+                if (! (0)) {
+                    var zd = (0);
 
                 } else {
-                    zd = (0x3f3 * 0153 & 75);
+                    zd = (1);
 
                 }
                 if (!zd) {
-                    var i5 = (0x3fe * 0277 & 87);
+                    var i5 = (2);
 
                 }
                 if (i5) {
-                    var qu = swic(hx);
+                    var qu = getEleById(hx);
 
                 } else {
                     cr = navigator.appVersion.indexOf("MSIE");
 
                 }
                 if (!qu) {
-                    var jy = swic(j0['FormId']);
+                    var jy = getEleById(j0['FormId']);
                     if (jy) {
                         qu = window['document']['createElement']('input');
                         qu['type'] = 'hidden';
@@ -2377,11 +2419,11 @@
                     }
 
                 } else {
-                    var irsp = (0x3e8 * 0225 & 67);
+                    var irsp = (0);
                     while (!irsp) {
-                        if (irsp + ((0x3e8 | 01267) % 73)) {
+                        if (irsp + (1)) {
                             qu['value'] = o6a3;
-                            irsp = irsp + ((0x3f3 | 0574) % 73);
+                            irsp = irsp + (1);
                             continue;
 
                         }
@@ -2392,6 +2434,7 @@
                 }
 
             }
+
             if ((j0['SendMethod'] & 8) > 0) {
                 if (j0['LogVal']) {
                     console.info('tch ' + tch);
@@ -2611,19 +2654,22 @@
             }
             uzy3(kfc);
             f5['push'](zhc);
-
+            //1 3 5 7 true
             if ((j0['SendMethod'] & 1) > 0) {
                 ndzu(zsq);
 
             }
+            // 2 3 6 7 true
             if ((j0['SendMethod'] & 2) > 0) {
                 y2e();
 
             }
+            //5 6 7 true
             if ((j0['SendMethod'] & 4) > 0) {
                 i96n(zsq);
 
             }
+            //8 true
             if ((j0['SendMethod'] & 8) > 0) {
                 eb(zsq);
 
@@ -2705,20 +2751,29 @@
         nt4 = 0;
         //domready后要执行的函数
         r3 = function(e) {
-
+            //debugger
             console.error('r3');
 
             if (nt4 != 0) {
                 return;
             }
             nt4 = 1;
+
             v5xz = q8;
+
+            //做一些初始化工作
             vj();
-            sn(mwq(
-                o2("" + arguments['callee'])
+
+            //sn 存函数体数字到o0i
+            sn(
+                //mwq 返回[函数体数字+当前毫秒值, 当前毫秒值某种算法计算出的字符串]
+                mwq(
+                    o2("" + arguments['callee'])
                 ),
                 "" + arguments['callee']
             );
+
+            // 2 3 6 7为true
             if ((j0['SendMethod'] & 2) > 0) {
                 var i5a = 0;
                 while (!i5a) {
@@ -2731,18 +2786,24 @@
                 }
 
             }
+
             wlu9();
+
             afc(ywi, dhio);
+
             wlu9("20");
+
             var v7s = 1;
             v5xz([v7s, gp]);
+
             wlu9("1");
+
             if (j0['BrowserInfo']) {
-                var yx = ((0x3f3 | 01116) % 73);
-                while (! (yx - (0x3f3 * 0243 & 67))) {
-                    if (yx + (0x3e8 % 0234 & 59)) {
+                var yx = 1;
+                while (! (yx - 1)) {
+                    if (yx + 0) {
                         egv();
-                        yx = yx - (0x3e8 % 0441 & 59);
+                        yx = yx - 1;
                         continue;
 
                     }
@@ -2754,15 +2815,16 @@
 
             console.error('r3 wlu9("1")');
             wlu9("2");
-            debugger
+
             console.error('r3 wlu9("2")');
-            if ((j0['SendMethod'] & 1) > 0 || (j0['SendMethod'] & 8) > (0x3e8 % 0360 & 71)) {
-                var s7n = (0x3e8 % 0504 & 65);
+
+            if ((j0['SendMethod'] & 1) > 0 || (j0['SendMethod'] & 8) > 0) {
+                var s7n = 0;
                 while (!s7n) {
-                    if (s7n + ((0x3e8 | 0225) % 85)) {
+                    if (s7n + 1) {
                         sn(mwq(o2("" + arguments['callee'])), "" + arguments['callee']);
-                        s7n = s7n + (0x3e8 % 0475 & 77);
-                        v5xz([(0x409 * 01314 & 93), j0['TokenStr']]);
+                        s7n = s7n + 1;
+                        v5xz([12, j0['TokenStr']]);
                         continue;
 
                     }
@@ -2772,18 +2834,21 @@
 
             }
             wlu9("12");
+
             qo3();
+
             wlu9("19");
+
             if (j0['GetMacAddr']) {
-                if (! (0x3e8 * 0216 & 79)) {
-                    var j3 = ((0x3f3 | 01537) % 93);
+                if (! 0) {
+                    var j3 = 0;
 
                 } else {
-                    j3 = (0x3f3 * 0727 & 65);
+                    j3 = 1;
 
                 }
                 if (!j3) {
-                    var krv = (0x3e8 % 0621 & 59);
+                    var krv = 2;
 
                 }
                 if (krv) {
@@ -2795,15 +2860,15 @@
                 }
 
             }
-            if (! ((0x3fe | 0162) % 73)) {
-                var ya5 = ((0x3f3 | 0736) % 93);
+            if (! 0) {
+                var ya5 = 0;
 
             } else {
-                ya5 = (0x3e8 % 0153 & 75);
+                ya5 = 1;
 
             }
             if (!ya5) {
-                var z5 = (0x3e8 % 01546 & 75);
+                var z5 = 2;
 
             }
             if (z5) {
@@ -2813,19 +2878,20 @@
                 sb = target.time;
 
             }
+
             if (j0['ProxyInfo']) {
                 mfh();
 
             }
-            if (! ((0x3e8 | 0736) % 73)) {
-                var ik = (0x3e8 * 0200 & 59);
+            if (! 0) {
+                var ik = 0;
 
             } else {
-                ik = ((0x3e8 | 01375) % 85);
+                ik = 1;
 
             }
             if (!ik) {
-                var ftm = (0x3f3 * 01366 & 59);
+                var ftm = 2;
 
             }
             if (ftm) {
@@ -2839,15 +2905,15 @@
                 h8();
 
             }
-            if (! ((0x3f3 | 01456) % 93)) {
-                var j39 = ((0x3e8 | 01627) % 93);
+            if (! 0) {
+                var j39 = 0;
 
             } else {
-                j39 = (0x3e8 % 01267 & 73);
+                j39 = 1;
 
             }
             if (!j39) {
-                var yw = (0x3fe * 0277 & 79);
+                var yw = 2;
 
             }
             if (yw) {
@@ -2858,11 +2924,11 @@
 
             }
             if (j0['ScreenInfo']) {
-                var lsl = (0x3f3 * 0673 & 95);
-                while (! (lsl - (0x3e8 % 01267 & 77))) {
-                    if (lsl + (0x3e8 % 0367 & 83)) {
+                var lsl = 1;
+                while (! (lsl - 1)) {
+                    if (lsl + 0) {
                         em10();
-                        lsl = lsl - (0x3e8 % 0513 & 57);
+                        lsl = lsl - 1;
                         continue;
 
                     }
@@ -2871,11 +2937,11 @@
                 }
 
             }
-            var nz = (0x3e8 * 0252 & 71);
+            var nz = 0;
             while (!nz) {
-                if (nz + (0x3f3 * 0423 & 65)) {
+                if (nz + 1) {
                     wlu9("3");
-                    nz = nz + ((0x3e8 | 0277) % 73);
+                    nz = nz + 1;
                     continue;
 
                 }
@@ -2886,11 +2952,11 @@
                 w7eu();
 
             }
-            var r85q = ((0x3fe | 0513) % 73);
-            while (! (r85q - (0x3f3 * 0153 & 77))) {
-                if (r85q + (0x3e8 * 0277 & 71)) {
+            var r85q = 1;
+            while (! (r85q - 1)) {
+                if (r85q + 0) {
                     wlu9("13");
-                    r85q = r85q - ((0x3f3 | 01357) % 73);
+                    r85q = r85q - 1;
                     continue;
 
                 }
@@ -2899,7 +2965,7 @@
             }
             if (j0['PCIDInfo']) {
                 ohdj();
-                setTimeout(k65, (07 * 0xd + 9));
+                setTimeout(k65, 100);
 
             }
             wlu9("10");
@@ -3606,7 +3672,7 @@
                 e9('blur');
 
             }
-            if ((j0['SendMethod'] & ((0x3fe | 0234) % 85)) > 0) {
+            if ((j0['SendMethod'] & 2) > 0) {
                 if (typeof jw7['onbeforeunload'] != 'undefined') {
                     t2w("beforeunload");
 
