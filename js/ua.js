@@ -649,7 +649,9 @@
 
         o6y = function(qkcd) {
             try {
-                if (qkcd["console"] && (qkcd['console']['firebug'] || qkcd['console']['exception'])) {
+                if (qkcd["console"] &&
+                    (qkcd['console']['firebug'] ||
+                        qkcd['console']['exception'])) {
                     return 2;
 
                 } else if ("__IE_DEVTOOLBAR_CONSOLE_COMMAND_LINE" in qkcd) {
@@ -658,7 +660,9 @@
                 } else if ("console" in qkcd && "onhelp" in qkcd) {
                     return 4;
 
-                } else if (window['outerHeight'] && window["innerHeight"] && window["outerHeight"] - window['innerHeight'] > (5 + 017 * 0xd)) {
+                } else if (window['outerHeight'] &&
+                    window["innerHeight"] &&
+                    window["outerHeight"] - window['innerHeight'] > (200)) {
                     return 8;
 
                 } else {
@@ -667,7 +671,7 @@
                 }
 
             } catch(err) {
-                return ((0x3e8 | 01611) % 91);
+                return 0;
 
             }
 
@@ -675,12 +679,16 @@
 
         //dhio -502452104
         dhio = o2(o6a3 + arguments['callee']);
-
+        /**
+         *
+         * @param {Number} h25 浏览器标识 chrome 1
+         * @param {Number} rx 根函数数字
+         */
         afc = function(h25, rx) {
             ifi0(['de', h25 + "_" + rx]);
-
         };
 
+        //创建个时间毫秒 编码后存到h6中
         wlu9 = function(hj3o) {
             var xm = 1;
             var u4 = 0;
@@ -688,7 +696,9 @@
             switch ((++u4 - xm--) * xm) {
                 case(0) :
                     var q4bf = new window["Date"]()["getTime"]();
+                    console.info('wlu9 当前时间毫秒' + q4bf);
                 case(1) :
+                    console.info('wlu9 编码后' + wwr8(q4bf));
                     h6["push"](wwr8(q4bf));
                     break;
                 case (2) :
@@ -697,8 +707,12 @@
             }
 
             if (h6["length"] > 1) {
+                console.info('上一个 ' + xet(h6[h6["length"] - 2]));
+                //xet 将时间毫秒编码后的字符串解码 还原成时间毫秒
                 var kxom = q4bf - xet(h6[h6["length"] - 2]);
+                //pza 5000
                 if (kxom > pza) {
+                    //如果是加断点 调试代码时 前后时间差会超过5000 会走这里
                     var ah = 1;
                     while (! (ah - 1)) {
                         if (ah + 0) {
@@ -706,57 +720,49 @@
                             ah = ah - 1;
                             ri();
                             continue;
-
                         }
+                        //这不会执行
                         this.vak = lkjh.join('{');
-
                     }
-
                 }
-
             }
             return true;
-
         };
         xet = function(o2f4, t0) {
-            var h7 = ((0x3e8 | 01305) % 91),
+            var h7 = 4,
                 i1e = o6a3;
-            var tvu = (0x3e8 * 0252 & 75);
+            var tvu = 0;
             while (!tvu) {
-                if (tvu + (0x3f3 * 0351 & 85)) {
+                if (tvu + 1) {
                     var zif = o6a3 + o2f4;
-                    tvu = tvu + ((0x3e8 | 01267) % 73);
+                    tvu = tvu + 1;
                     continue;
-
                 }
                 lli = fk.charCodeAt(po++);
-
             }
             for (var i = zif["length"] - 1; i >= 0; i--) {
-                var gcq = (0x3e8 % 01107 & 81);
-                while (! (gcq - ((0x3e8 | 0556) % 67))) {
-                    if (gcq + ((0x3f3 | 0216) % 93)) {
+                var gcq = 1;
+                while (! (gcq - 1)) {
+                    if (gcq + 0) {
                         var bbi = zif["charCodeAt"](i)["toString"](16);
-                        gcq = gcq - (0x3f3 * 0351 & 69);
+                        gcq = gcq - 1;
                         continue;
-
                     }
                     op = navigator.appVersion.indexOf("MSIE");
-
                 }
                 while (bbi["length"] != h7) {
                     bbi = "0" + bbi;
 
                 }
-                if (! (0x3e8 % 0306 & 97)) {
-                    var im = ((0x3f3 | 01537) % 93);
+                if (! 0) {
+                    var im = 0;
 
                 } else {
-                    im = (0x3e8 % 01107 & 85);
+                    im = 1;
 
                 }
                 if (!im) {
-                    var bxk = (0x3f3 * 01726 & 67);
+                    var bxk = 2;
 
                 }
                 if (bxk) {
@@ -814,7 +820,6 @@
             var q4bf = new window["Date"]()["getTime"]();
             //wwr8  根据当前时间安某种算法返回一个字符串
             return [n3g + q4bf, wwr8(q4bf)];
-
         };
         co = function(rgb, bpuj) {
             ifi0(["ic", rgb, bpuj]);
@@ -861,6 +866,12 @@
             return wk['join'](o6a3) + wtp;
 
         };
+        /**
+         *
+         * @param kyis [20 ,["to", [kxom, q4bf, hj3o]]]
+         * @param og |出现的个数
+         * @returns {*}
+         */
         cgy = function(kyis, og) {
             var uzy3 = jw7(kyis);
             var q8 = n3g(uzy3);
@@ -868,13 +879,20 @@
             return ri(q8, og);
 
         };
+        /**
+         *
+         * @param {Number} kmz 函数数字
+         * @param geom
+         * @returns {boolean}
+         */
         l3q = function(kmz, geom) {
+
             for (var i = 0, non = o0i["length"]; i < non; i++) {
                 if (kmz == o0i[i]) {
                     return true;
                 }
-
             }
+            console.info('l3q 当前函数体数字不在o0i中');
             if (!0) {
                 var aj = 0;
 
@@ -911,6 +929,7 @@
             //所有调用sn的地方都传了wk参数
             if (wk == o6a3 || typeof wk == "undefined" ||
                 kmz[0] != (gv + xet(kmz[1]))) {
+                console.info('sn 没传wk');
                 co(gv, "r");
                 return;
             }
@@ -984,12 +1003,20 @@
             }
 
         };
+
+        /**
+         *                  ['de', h25 + "_" + rx]
+         * @param {Array} d ["to", [kxom, q4bf, hj3o]]
+         */
         ifi0 = function(d) {
             for (var uqd = 0; uqd < 3; uqd++) {
                 if (uqd == 0) {
                     sn(
-                        mwq(o2("" + arguments["callee"])), "" + arguments["callee"]);
-
+                        mwq(
+                            o2("" + arguments["callee"])
+                        ),
+                        "" + arguments["callee"]
+                    );
                 } else if (uqd == 2) {
                     q8([j4w, d]);
                 }
@@ -1036,18 +1063,17 @@
                 kqo = o6a3;
             var r8 = (q8 != 0) ? zb(n3g, q8) : n3g;
             var ip6x = r8["length"];
-            while (ip6x >= i + (0x3f3 % 0324 & 67)) {
-                x4 = nwgx(r8, i++, (0x3f3 * 01206 & 67)) | nwgx(r8, i++, 1) | nwgx(r8, i++, (0x3e8 % 0171 & 73));
-                kqo += a1i9["charAt"]((x4 & 0x00fc0000) >> 18);
-                kqo += a1i9["charAt"]((x4 & (0x4d89 * 015 + 11)) >> 12);
-                kqo += a1i9["charAt"]((x4 & 0x00000fc0) >> (0x3e8 % 01062 & 79));
-                var pk8 = (0x3e8 % 0522 & 57);
+            while (ip6x >= i + (3)) {
+                x4 = nwgx(r8, i++, (2)) | nwgx(r8, i++, 1) | nwgx(r8, i++, (0));
+                kqo += a1i9["charAt"]((x4 & 16515072) >> 18);
+                kqo += a1i9["charAt"]((x4 & (258048)) >> 12);
+                kqo += a1i9["charAt"]((x4 & 4032) >> (6));
+                var pk8 = (0);
                 while (!pk8) {
-                    if (pk8 + (0x3f3 * 0207 & 75)) {
-                        kqo += a1i9["charAt"]((x4 & (0x687 * 01611 & 63)));
-                        pk8 = pk8 + (0x4cf % 0315);
+                    if (pk8 + (1)) {
+                        kqo += a1i9["charAt"]((x4 & (63)));
+                        pk8 = pk8 + (1);
                         continue;
-
                     }
                     im4 += e3;
 
@@ -1056,10 +1082,10 @@
             }
             if (ip6x - i > 0 && ip6x - i < 3) {
                 agn = window["Boolean"](ip6x - i - 1);
-                x4 = x4 = nwgx(r8, i++, (0x3f3 % 01071 & 67)) | (agn ? nwgx(r8, i++, (0x3f3 * 0243 & 65)) : 0);
-                kqo += a1i9["charAt"]((x4 & 0x00fc0000) >> (0x3e8 % 0531 & 91));
-                kqo += a1i9["charAt"]((x4 & (0x4d89 * 015 + 11)) >> ((0x3f3 | 0225) % 59));
-                kqo += (agn ? a1i9["charAt"]((x4 & 0x00000fc0) >> ((0x3f3 | 01001) % 67)) : s74k);
+                x4 = x4 = nwgx(r8, i++, (2)) | (agn ? nwgx(r8, i++, (1)) : 0);
+                kqo += a1i9["charAt"]((x4 & 16515072) >> (18));
+                kqo += a1i9["charAt"]((x4 & (258048)) >> (12));
+                kqo += (agn ? a1i9["charAt"]((x4 & 4032) >> (6)) : s74k);
                 kqo += s74k;
 
             }
@@ -1101,25 +1127,28 @@
             return jw7;
 
         };
-        uzy3 = function(wk) {
-            for (var wq = ((0x3f3 | 0376) % 93); wq < (0x3f3 * 01125 & 83); wq++) {
-                if (wq == ((0x3e8 | 01053) % 59)) {
-                    var jv = wk[(0x3e8 % 0234 & 55)];
 
-                } else if (wq == ((0x3e8 | 01636) % 85)) {
+        /**
+         *  向wws数组中存
+          * @param wk
+         */
+        uzy3 = function(wk) {
+            for (var wq = 0; wq < 3; wq++) {
+                if (wq == 0) {
+                    var jv = wk[0];
+
+                } else if (wq == 2) {
                     wws["push"](jv * eabj - wws["length"]);
 
                 }
-                if (wq == (0x3f3 * 0565 & 81)) {
+                if (wq == 1) {
                     var eabj = jv;
 
                 }
-                var sy = (0x3f3 * 01177 & 85);
-                if (sy == (0x3e8 % 0513 & 83)) {
+                var sy = 5;
+                if (sy == 3) {
                     vu += 1;
-
                 }
-
             }
 
         };
@@ -1460,32 +1489,35 @@
             return (zb['charCodeAt'](vm4v) & (023 * 0xd + 8)) << (8 * k0vc);
 
         };
+        //jw7 [20 ,["to", [kxom, q4bf, hj3o]]]
+        //jw7 [20, ['de', 浏览器标识 + "_" + 函数体数字]]
         eb = function(jw7) {
             console.info('eb');
             console.trace('eb');
             if (j0["LogVal"]) {
                 var d2td = window['eval'](j0['LogVal']);
+                //uadata中有几个|
                 var x05p = zi(d2td) + 1;
+
                 var ejk8 = cgy(jw7, x05p);
+
                 var qfv = cgy(wws, x05p + 1);
+                //o6a3 ""
                 if (d2td == o6a3) {
                     var k1 = 1;
                     while (! (k1 - 1)) {
                         if (k1 + 0) {
+                            //a1i9 "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"
                             d2td = a1i9["substring"](53, 56) + ejk8 + m64 + qfv;
                             k1 = k1 - 1;
                             continue;
-
                         }
                         0x0003f000;
-
                     }
-
                 } else {
                     var cahj = d2td['lastIndexOf'](m64);
                     var iq = d2td['substring'](0, cahj);
                     d2td = iq + m64 + ejk8 + m64 + qfv;
-
                 }
                 var lg = 1;
                 var c24b = 2;
@@ -1499,11 +1531,8 @@
                         break;
                     default:
                         st3 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-
                 }
-
             }
-
         };
         qo3 = function() {
             try {
@@ -1655,15 +1684,14 @@
 
         };
         n3g = function(wk) {
-            if (! (0x3e8 * 0144 & 67)) {
-                var ul = ((0x3e8 | 01026) % 73);
+            if (! (0)) {
+                var ul = (0);
 
             } else {
-                ul = (0x3f3 * 0423 & 55);
-
+                ul = (1);
             }
             if (!ul) {
-                var j38 = (0x3fe * 0367 & 79);
+                var j38 = (2);
 
             }
             if (j38) {
@@ -1676,10 +1704,9 @@
             for (var i = 0; i < wk["length"]; i++) {
                 var jea = wk["charCodeAt"](i);
                 var ad2 = (jea >> 4);
-                var t0 = (jea << (0x3f3 * 01314 & 79));
-                var d = ((ad2 + t0 + ((0x3fe | 01422) % 85)) & (0x13 * 015 + 8));
+                var t0 = (jea << (4));
+                var d = ((ad2 + t0 + (2)) & (255));
                 d2td += window["String"]["fromCharCode"](d);
-
             }
             return d2td;
 
@@ -1862,6 +1889,13 @@
             return [f, wk];
 
         };
+        /**
+         *
+         * @param l7w [20 ,["to", [kxom, q4bf, hj3o]]]
+         * @param w
+         * @param d
+         * @returns {*}
+         */
         jw7 = function(l7w, w, d) {
             var r09n = {
                 "\b": "\\b",
@@ -1873,20 +1907,22 @@
                 "\\": "\\\\"
 
             };
-            var a72 = (0x3f3 * 0315 & 73);
-            var u7j = ((0x3e8 | 0376) % 73);
+            var a72 = 1;
+            var u7j = 0;
+            //(++u7j - a72--) * a72求值后是0
             switch ((++u7j - a72--) * a72) {
-                case(0x3e8 * 0277 & 69) : var m4m = new window['RegExp']('["\\\\\\x00-\\x1f\\x7f-\\x9f]', 'g');
-                case(0x3e8 % 01107 & 71) : var b97t = [];
+                case(0) : var m4m = new window['RegExp']('["\\\\\\x00-\\x1f\\x7f-\\x9f]', 'g');
+                case(1) : var b97t = [];
                     break;
-                case (0x3f3 * 01366 & 71) : x = window;
+                case (2) : x = window;
 
             }
             var zgw5 = function(jea) {
                 if (!r09n[jea]) {
                     var ad2 = jea["charCodeAt"]();
-                    r09n[jea] = '\\u00' + window['Math']['floor'](ad2 / (0x3e8 % 0630 & 85))['toString'](((0x409 | 01242) % 89)) + (ad2 % (0x3e8 % 01726 & 93))['toString']((0x3e8 % 0727 & 81));
-
+                    r09n[jea] = '\\u00' +
+                        window['Math']['floor'](ad2 / 16)['toString'](16) +
+                            (ad2 % (16))['toString']((16));
                 }
                 return r09n[jea];
 
@@ -1895,7 +1931,7 @@
                 return '"' + qkcd['replace'](m4m, zgw5) + '"';
 
             };
-            var oyz = function(ad2) {
+            var isArray = function(ad2) {
                 return window['Object']['prototype']['toString']['call'](ad2) === "[object Array]";
 
             };
@@ -1923,15 +1959,15 @@
                 return typeof ad2 == "number";
 
             };
-            if (! ((0x3e8 | 01134) % 85)) {
-                var p7 = ((0x3e8 | 01645) % 67);
+            if (!0) {
+                var p7 = (0);
 
             } else {
-                p7 = (0x3e8 % 01323 & 73);
+                p7 = (1);
 
             }
             if (!p7) {
-                var zws = (0x3e8 % 01546 & 71);
+                var zws = (2);
 
             }
             if (zws) {
@@ -1969,38 +2005,30 @@
                     return ht(l7w);
 
                 }
-                if (oyz(l7w)) {
+                if (isArray(l7w)) {
                     for (i = b97t['length'] - 1; i >= 0; --i) {
                         if (b97t[i] === l7w) {
                             return 'null';
-
                         }
-
                     }
                     b97t[b97t['length']] = l7w;
                     ad2 = [];
                     if (d > 0) {
                         for (i = l7w['length'] - 1; i >= 0; --i) {
                             ad2[i] = uxz0(l7w[i], w, d - 1) || 'null';
-
                         }
-
                     }
                     b97t['pop']();
                     return '[' + ad2['join'](',') + ']';
-
                 }
                 if (v7s === 'object') {
                     if (!l7w) {
                         return 'null';
-
                     }
                     for (i = b97t['length'] - 1; i >= 0; --i) {
                         if (b97t[i] === l7w) {
                             return 'null';
-
                         }
-
                     }
                     var nq = ((0x3fe | 0261) % 73);
                     var gr = (0x3e8 % 0655 & 67);
@@ -2067,7 +2095,8 @@
                 return undefined;
 
             };
-            d = d >= (0x3e8 * 0171 & 83) ? d: 1 / 0;
+
+            d = d >= (0) ? d: 1 / 0;
             return uxz0(l7w, w, d);
 
         };
@@ -2624,55 +2653,57 @@
             return u08;
 
         };
+
+        //[20 ,["to", [kxom, q4bf, hj3o]]]
+        //[20, ['de', 浏览器标识 + "_" + 函数体数字]]
         q8 = function(kfc) {
             var zsq = kfc;
+
             if (!suxi) {
                 return;
             }
+
             for (var zs = 0; zs < 3; zs++) {
                 if (zs == 0) {
-                    l3q(o2("" + arguments['callee']['caller']), "s");
-
+                    //o2 返回函数数字
+                   // debugger
+                    l3q(o2(
+                        "" + arguments['callee']['caller']
+                    ), "s");
                 } else if (zs == 2) {
                     var i = 0;
-
                 }
                 if (zs == 1) {
                     var zhc = [];
-
                 }
                 var j71c = 5;
                 if (j71c == 3) {
                     po += 2;
-
                 }
-
             }
             for (; i < zsq['length']; i++) {
                 zhc['push'](zsq[i]);
-
             }
+
             uzy3(kfc);
+
             f5['push'](zhc);
+
             //1 3 5 7 true
             if ((j0['SendMethod'] & 1) > 0) {
                 ndzu(zsq);
-
             }
             // 2 3 6 7 true
             if ((j0['SendMethod'] & 2) > 0) {
                 y2e();
-
             }
             //5 6 7 true
             if ((j0['SendMethod'] & 4) > 0) {
                 i96n(zsq);
-
             }
             //8 true
             if ((j0['SendMethod'] & 8) > 0) {
                 eb(zsq);
-
             }
 
         };
@@ -2712,17 +2743,20 @@
             return a1i9['charAt']((n3g & q8[k0vc]) >> (6 * k0vc));
 
         };
+        /**
+         * 记录uadata中有几个|
+         * @param jw7 uadata值
+         * @returns {number}
+         */
         zi = function(jw7) {
             var thbf = 0;
             for (var i = 0; i < jw7["length"]; ++i) {
+                //m64 '|'
                 if (jw7["charAt"](i) == m64) {
                     thbf += 1;
-
                 }
-
             }
             return thbf;
-
         };
         mfh = function() {
             var swd = (0x3e8 % 0144 & 65);
@@ -2786,9 +2820,11 @@
                 }
 
             }
-
+           // debugger
             wlu9();
 
+            //ywi 用来判断浏览器的  chrome是1
+            //dhio根函数体数字
             afc(ywi, dhio);
 
             wlu9("20");
